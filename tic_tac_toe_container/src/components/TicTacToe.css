@@ -1,0 +1,96 @@
+/* TicTacToe Game Styles */
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--kavia-orange);
+}
+
+.game-status {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 30px;
+  color: var(--text-color);
+}
+
+.game-board {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background-color: var(--kavia-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 80px;
+  margin: 4px;
+  width: 80px;
+  transition: all 0.2s ease;
+}
+
+.square:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.square:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 122, 65, 0.5);
+}
+
+/* Style X marks in orange */
+.square:nth-child(odd):not(:empty) {
+  color: var(--kavia-orange);
+}
+
+/* Style O marks in white */
+.square:nth-child(even):not(:empty) {
+  color: var(--text-color);
+}
+
+.reset-button {
+  margin-top: 10px;
+  min-width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .square {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .game-title {
+    font-size: 2rem;
+  }
+}
